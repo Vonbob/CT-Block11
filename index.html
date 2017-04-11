@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Weather</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script src="js/jquery-3.2.0.min.js"></script>
+        <script src="js/jquery.simpleWeather.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="weather-container">
+                <div class="templocal">
+                    <p class="temperature">0&deg;</p>
+                    <p class="location">YOUR CITY</p>
+                    <div class="panel">
+                        <img class="options-icon" title="options" src="images/options.png" alt="" />
+                        <p class="check-time"></p>
+                    </div>
+                </div>
+                <div class="climate">
+                    <img src="images/sun.svg">
+                </div>
+                <div class="info">
+                    <img class="dropicon infoel" src="images/droplet.svg" />
+                    <p class="humidity infoel"></p>
+                    <img class="windicon infoel" src="images/wind.svg" />
+                    <p class="windspeed infoel"></p>
+                </div>
+            </div>
+            <div class="options-container">
+                <div class="interval-set">
+                    <p>Check weather after:</p>
+                    <input id="tenSeconds" type="radio" name="interval" value="10" checked /><label for="ten-seconds">10 sec</label>
+                    <input id="oneMinute" type="radio" name="interval" value="1" /><label for="one-minute">1 min</label>
+                    <input id="fiveMinutes" type="radio" name="interval" value="5" /><label for="five-minutes">5 min</label>
+                </div>
+                <div class="units-set">
+                    <p>Temperature units:</p>
+                    <input id="cel" type="radio" name="units" value="c" checked /><label for="cel">Celsius</label>
+                    <input id="far" type="radio" name="units" value="f" /><label for="far">Fahrenheit</label>
+                </div>
+            </div>
+            <div class="error-container">
+                <p></p>
+                <img src="images/close.png" class="close-error"/>
+            </div>
+        </div>
+        
+        <script src="js/main.js"></script>
+    </body>
+</html>

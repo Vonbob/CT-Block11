@@ -1,0 +1,163 @@
+﻿body {
+    background-color: lightgrey;
+    font-family: Arial;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    position: absolute;
+    margin: auto;
+    top: 0; right: 0; bottom: 0; left: 0;
+    width: 410px;
+    height: 348px;
+}
+
+.weather-container {
+    width: 410px;
+    height: 208px;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.templocal {
+    float: left;
+    width: 235px;
+    height: 208px;
+}
+
+.temperature {
+    text-align: center;
+    font-size: 4.25em;
+    font-weight: bold;
+    margin-top: 45px;
+    padding-left: 15px;
+}
+
+.location {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 1.313em;
+    text-transform: uppercase;
+}
+
+.climate {
+    float: right;
+    width: 175px;
+    height: 149px;
+    background-color: white;
+    text-align: center;
+}
+
+.climate > img {
+    width: 90%;
+}
+
+.info {
+    float: right;
+    width: 175px;
+    height: 59px;
+    background-color: dodgerblue;
+}
+
+.info >  .infoel {
+    float: left;
+    
+}
+
+.info > .dropicon {
+    width: 41px;
+    margin-top: 8px;
+    margin-left: -4px;
+}
+
+.info > .humidity {
+    margin-top: 21px;
+    margin-left: -4px;
+    width: 42px;
+}
+
+.info > .windicon {
+    width: 50px;
+    margin-top: 4px;
+    margin-left: -2px;
+}
+
+.info > .windspeed {
+    width: 50px;
+    margin-left: -10px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.options-container {
+    display: none;
+    width: 410px;
+    margin-top: 10px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    color: white;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.options-container > .interval-set {
+    float: left;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.options-container > .units-set {
+    float: right;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.error-container {
+    display: none;
+    width: 410px;
+    margin-top: 10px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: red;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.error-container > img.close-error {
+    float: right;
+    margin-top: 7px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.error-container > p {
+    float: left;
+    font-size: 0.8em;
+    margin-top: 3px;
+    margin-left: 3px;
+    color: white;
+    width: 380px;
+}
+
+.panel {
+    margin-top: 35px;
+}
+
+.options-icon {
+    margin-left: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+.check-time {
+    float: right;
+    margin-right: 5px;
+}
+
