@@ -43,57 +43,46 @@ var loadWeather = function (location, units) {
     });
 };
 
-/*option panel - for changing temperature units and interval */
-var options = {
-    restart: function () {
-        clearInterval(intervalID);
-        intervalID = setInterval(getWeather, interval);
-    },
-    tenSeconds: function() {
-        interval = 10000;
-        this.restart();
-    },
-    oneMinute: function () {
-        interval = 60000;
-        this.restart();
-    },
-    fiveMinutes: function () {
-        interval = 300000;
-        this.restart();
-    },
-    cel: function () {
-        tempUnits = "c";
-        this.restart();
-    },
-    far: function () {
-        tempUnits = "f";
-        this.restart();
-    }
-};
-
 /* error panel */
 var closeError = function () {
     $(".error-container").slideUp(400);
-}
+};
 
 /* options panel */
 var showOptions = function () {
     $(".options-container").slideToggle(400);
-}
+};
+
 
 /* changing options for weather information */
-var changeOptions = function (event) {
-    if (!event.target.id) {
+var changeInterval = function (event) {
+    if (!event.target.value) {
         return;
     }
 
-    options[event.target.id]();
-}
+    interval = event.target.value * 1000;
+    clearInterval(intervalID);
+    intervalID = setInterval(getWeather, interval);
+};
+
+
+var changeUnits = function (event) {
+    if (!event.target.value) {
+        return;
+    }
+
+    tempUnits = event.target.value;
+    clearInterval(intervalID);
+    getWeather();
+    intervalID = setInterval(getWeather, interval);
+};
 
 var addDOMEventListeners = function () {
     $(".close-error").click(closeError);
     $(".options-icon").click(showOptions);
-    $(".options-container").click(changeOptions);
+
+    $(".interval-set").click(changeInterval);
+    $(".units-set").click(changeUnits);
 }
 
 

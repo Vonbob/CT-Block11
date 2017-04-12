@@ -37,13 +37,15 @@ p {
     font-weight: bold;
     margin-top: 45px;
     padding-left: 15px;
+    line-height: 1em;
 }
 
 .location {
     text-align: center;
-    margin-top: 5px;
     font-size: 1.313em;
     text-transform: uppercase;
+    height: 70px;
+    overflow: hidden;
 }
 
 .climate {
@@ -66,8 +68,7 @@ p {
 }
 
 .info >  .infoel {
-    float: left;
-    
+    float: left; 
 }
 
 .info > .dropicon {
@@ -147,7 +148,7 @@ p {
 }
 
 .panel {
-    margin-top: 35px;
+    margin-top: 2px;
 }
 
 .options-icon {
