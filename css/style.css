@@ -107,18 +107,21 @@ p {
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
 }
 
-.options-container > .interval-set {
-    float: left;
+.options-container > fieldset {
+    border: none;
+    margin-top: 8px;
+    padding: 0;
     text-align: center;
-    margin-top: 5px;
-    margin-left: 10px;
+}
+
+.options-container > .interval-set {
+    float: left; 
+    margin-left: 4px;
 }
 
 .options-container > .units-set {
-    float: right;
-    text-align: center;
-    margin-top: 5px;
-    margin-right: 10px;
+    float: right;  
+    margin-right: 8px;
 }
 
 .error-container {

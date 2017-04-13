@@ -32,7 +32,7 @@ var loadWeather = function (location, units) {
             $(".humidity").text(weather.humidity + "%");
             $(".windspeed").text(weather.wind.speed + " " + weather.units.speed);
             var d = new Date();
-            $(".check-time").text("Last check: " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());
+            $(".check-time").text("last update: " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());
         },
 
         error: function (err) {
@@ -56,21 +56,12 @@ var showOptions = function () {
 
 /* changing options for weather information */
 var changeInterval = function (event) {
-    if (!event.target.value) {
-        return;
-    }
-
     interval = event.target.value * 1000;
     clearInterval(intervalID);
     intervalID = setInterval(getWeather, interval);
 };
 
-
 var changeUnits = function (event) {
-    if (!event.target.value) {
-        return;
-    }
-
     tempUnits = event.target.value;
     clearInterval(intervalID);
     getWeather();
@@ -81,8 +72,8 @@ var addDOMEventListeners = function () {
     $(".close-error").click(closeError);
     $(".options-icon").click(showOptions);
 
-    $(".interval-set").click(changeInterval);
-    $(".units-set").click(changeUnits);
+    $("input[name='interval']").change(changeInterval);
+    $("input[name='units']").change(changeUnits);
 }
 
 
